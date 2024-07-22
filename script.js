@@ -105,7 +105,9 @@ function displayList(alarms){
     heading.classList.add('heading');
    alarms.forEach((element,index)=>{
        let alarmDetails = document.createElement('li');
-       alarmDetails.innerHTML  = `${element.hour} : ${element.minute} : ${element.period} <button class="cancel-btn" data-index="${index}">X</button>`;
+       let minutes = numPad0(element.minute);
+       console.log(minutes);
+       alarmDetails.innerHTML  = `${element.hour} : ${minutes} : ${element.period} <button class="cancel-btn" data-index="${index}">X</button>`;
        alarmDetails.classList.add('alarmList');
        list.appendChild(alarmDetails);
    });
