@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Time</title>
+
+
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="setAlarm" class="align-left">
+            <form autocomplete="off">
+                <h3>Set Alarm</h3>
+                <div class="field">
+                    <label for="hr">Hour</label>
+                    <input type="text" id="hr" name="hr" maxlength="2">
+                </div>
+                <div class="field">
+                    <label for="min">Minutes</label>
+                    <input type="text" id="min" name="min" maxlength="2">
+                </div>
+                <div class="field">
+                    <label for="period">AM/PM:</label>
+                    <select id="period">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </div>
+            </form>
+            <div class="align-button">
+                <button type="button" id="set-button">
+                    Set
+                </button>
+            </div>
+        </div>
+        <div id="time"></div>
+        <div id="alarms">
+            <h3 id="heading"></h3>
+            <ul id="list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

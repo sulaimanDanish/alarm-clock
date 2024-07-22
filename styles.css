@@ -1,0 +1,147 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif:700);
+
+body {
+    margin     : 0;
+    background : hsla(29, 65%, 50%, 1);
+    font-family: 'Noto Serif', serif;
+    overflow   : scroll;
+    width      : 100%;
+
+}
+
+.container {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    width          : 100%;
+}
+
+.align-left {
+    margin-top : 10vw;
+    margin-left: 20px;
+    width      : 40vw;
+}
+
+form {
+    margin-left: 15vw;
+    z-index    : 1;
+
+    h3 {
+        padding-left: 1rem;
+        text-align  : left;
+        font-size   : 3em;
+        font-weight : bold;
+    }
+
+    .field {
+        margin    : 2em;
+        opacity   : .5;
+        text-align: center;
+        transition: all .2s ease-in-out;
+        width     : 200px;
+
+        &.active {
+            opacity  : 1;
+            transform: scale(1.5);
+        }
+
+        &.semi-active {
+            opacity  : .75;
+            transform: scale(1.25);
+        }
+
+        label {
+            display  : block;
+            font-size: 1em;
+        }
+    }
+}
+
+.align-button {
+    margin-left: 10vw;
+    text-align : center;
+
+    button {
+        margin-right: 0.5rem;
+        font-family : 'Noto Serif', serif;
+        font-size   : 2rem;
+        cursor      : pointer;
+        padding     : .1em .6em;
+        font-weight : bold;
+        border      : none;
+        --c         : #f1d7be;
+
+        box-shadow: 0 0 0 .1em inset var(--c);
+        --_g      : linear-gradient(var(--c) 0 0) no-repeat;
+        background:
+            var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+            var(--_g) calc(200% - var(--_p, 0%)) 0%,
+            var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+            var(--_g) calc(200% - var(--_p, 0%)) 100%;
+        background-size: 50.5% calc(var(--_p, 0%)/2 + .5%);
+        outline-offset : .1em;
+        transition     : background-size .4s, background-position 0s .4s;
+    }
+
+    button:hover {
+        --_p      : 100%;
+        transition: background-position .4s, background-size 0s;
+    }
+
+    button:active {
+        box-shadow      : 0 0 9e9q inset #0009;
+        background-color: var(--c);
+        color           : #fff;
+    }
+}
+
+#time {
+    padding     : 10px;
+    position    : absolute;
+    margin-left : 40vw;
+    margin-right: 30vw;
+    margin-top  : 5%;
+    top         : 0;
+    left        : 0;
+    width       : 350px;
+    color       : hsla(255, 255%, 255%, 0.7);
+    font-size   : 4em;
+    font-weight : bold;
+    text-align  : center;
+    line-height : 500px;
+    z-index     : 1;
+}
+
+#alarms {
+    top  : 0;
+    width: 30vw;
+
+}
+
+.alarmList {
+    padding: 5px;
+    font-size   : 1.6em;
+    font-weight : bold;
+    text-align  : start;
+    color       : hsla(255, 255%, 255%, 0.7);
+}
+
+.heading {
+    text-align : center;
+    font-size  : 3em;
+    font-weight: bold;
+}
+
+.cancel-btn {
+    margin-left: 25px;
+    margin-bottom: 15px;
+    background-color: red;
+    color           : white;
+    border          : none;
+    border-radius   : 15px;
+    cursor          : pointer;
+}
+
+.cancel-btn:hover {
+    background-color: darkred;
+}
